@@ -63,9 +63,9 @@ void MainWindow::on_pushButton_5_reset_clicked()                    // 초기화
 
 void MainWindow::on_pushButton_6_set_clicked()                      // 선택완료 버튼
 {
-    QString age = "", habby = "";
+    QString age = "", hobby = "";
 
-    if(ui->radioButton_1_20->isChecked()){
+    if(ui->radioButton_1_20->isChecked()){                          // 라디오 체크 여부에 따라 나이대 설정
         age = ui->radioButton_1_20->text();
     } else if(ui->radioButton_2_30->isChecked()){
         age = ui->radioButton_2_30->text();
@@ -75,9 +75,42 @@ void MainWindow::on_pushButton_6_set_clicked()                      // 선택완
         age = QString("그외");
     }
 
+    if(ui->checkBox_1_youtube->isChecked()){                         // 각 체크박스 확인 후 취미 문자열에 추가
+        hobby = hobby + ui->checkBox_1_youtube->text();
+        if(ui->checkBox_2_exercise->isChecked())
+            hobby = hobby + ", \n" + ui->checkBox_2_exercise->text();
+        if(ui->checkBox_3_game->isChecked())
+            hobby = hobby + ", " + ui->checkBox_3_game->text();
+    } else if(ui->checkBox_2_exercise->isChecked()){
+        hobby = hobby + ui->checkBox_2_exercise->text();
+        if(ui->checkBox_3_game->isChecked())
+            hobby = hobby + ", \n" + ui->checkBox_3_game->text();
+    } else if(ui->checkBox_3_game->isChecked()){
+        hobby = hobby + ui->checkBox_3_game->text();
+    } else {
+        hobby = "";
+    }
+
+    ui->lineEdit_5_display->setText(age + ", " +hobby);              // 나이대, 취미 표시
 }
 
 void MainWindow::on_pushButton_7_reset_clicked()                    // 리셋 버튼
 {
+    ui->radioButton_1_20->setAutoExclusive(false);                  // 동일 부모를 가진 세 나이대 라디오 버튼의 원버튼유지속성 해제
+    ui->radioButton_2_30->setAutoExclusive(false);
+    ui->radioButton_3_40->setAutoExclusive(false);
 
+    ui->radioButton_1_20->setChecked(false);                        // 각 나이대 라디오버튼 체크 해제
+    ui->radioButton_2_30->setChecked(false);
+    ui->radioButton_3_40->setChecked(false);
+
+    ui->radioButton_1_20->setAutoExclusive(true);                   // 각 나이대 라디오버튼 원버튼유지속성 부여
+    ui->radioButton_2_30->setAutoExclusive(true);
+    ui->radioButton_3_40->setAutoExclusive(true);
+
+    ui->checkBox_1_youtube->setChecked(false);                      // 각 취미 체크박스 해제
+    ui->checkBox_2_exercise->setChecked(false);
+    ui->checkBox_3_game->setChecked(false);
+
+    ui->lineEdit_5_display->setText("");                            // 나이대, 취미 표시창 초기화
 }
