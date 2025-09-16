@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QDial>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -23,6 +24,8 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -72,10 +75,26 @@ public:
     QLabel *label_15;
     QComboBox *comboBox_1_gu;
     QComboBox *comboBox_2_dong;
-    QLineEdit *lineEdit_6_address;
+    QLineEdit *lineEdit_7_address;
     QLineEdit *lineEdit_6_great_person;
     QPushButton *pushButton_8_add_great_person;
     QPushButton *pushButton_9_remove_great_person;
+    QLabel *label_16;
+    QLabel *label_17;
+    QLineEdit *lineEdit_8_weight;
+    QLineEdit *lineEdit_9_career;
+    QLabel *label_18;
+    QLabel *label_19_prefer_num;
+    QLabel *label_20;
+    QLineEdit *lineEdit_10_height;
+    QLabel *label_21;
+    QLineEdit *lineEdit_11_salary;
+    QPushButton *pushButton_10_esc;
+    QDial *dial_prefer_num;
+    QSlider *horizontalSlider_weight;
+    QSlider *verticalSlider_height;
+    QScrollBar *horizontalScrollBar_career;
+    QScrollBar *verticalScrollBar_salary;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -84,7 +103,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(328, 628);
+        MainWindow->resize(328, 700);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -183,31 +202,31 @@ public:
         radioButton_3_40->setGeometry(QRect(10, 270, 41, 16));
         label_11 = new QLabel(centralWidget);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(10, 290, 121, 16));
+        label_11->setGeometry(QRect(10, 300, 121, 16));
         listWidget_1_great_person = new QListWidget(centralWidget);
         new QListWidgetItem(listWidget_1_great_person);
         new QListWidgetItem(listWidget_1_great_person);
         new QListWidgetItem(listWidget_1_great_person);
         listWidget_1_great_person->setObjectName(QStringLiteral("listWidget_1_great_person"));
-        listWidget_1_great_person->setGeometry(QRect(10, 310, 151, 151));
+        listWidget_1_great_person->setGeometry(QRect(10, 320, 151, 151));
         label_12 = new QLabel(centralWidget);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(170, 290, 61, 16));
+        label_12->setGeometry(QRect(170, 300, 61, 16));
         label_13 = new QLabel(centralWidget);
         label_13->setObjectName(QStringLiteral("label_13"));
-        label_13->setGeometry(QRect(170, 320, 56, 12));
+        label_13->setGeometry(QRect(170, 330, 56, 12));
         label_14 = new QLabel(centralWidget);
         label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setGeometry(QRect(170, 370, 56, 12));
+        label_14->setGeometry(QRect(170, 380, 56, 12));
         label_15 = new QLabel(centralWidget);
         label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(170, 420, 91, 16));
+        label_15->setGeometry(QRect(170, 430, 91, 16));
         comboBox_1_gu = new QComboBox(centralWidget);
         comboBox_1_gu->addItem(QString());
         comboBox_1_gu->addItem(QString());
         comboBox_1_gu->addItem(QString());
         comboBox_1_gu->setObjectName(QStringLiteral("comboBox_1_gu"));
-        comboBox_1_gu->setGeometry(QRect(170, 340, 141, 22));
+        comboBox_1_gu->setGeometry(QRect(170, 350, 141, 22));
         comboBox_2_dong = new QComboBox(centralWidget);
         comboBox_2_dong->addItem(QString());
         comboBox_2_dong->addItem(QString());
@@ -215,19 +234,78 @@ public:
         comboBox_2_dong->addItem(QString());
         comboBox_2_dong->addItem(QString());
         comboBox_2_dong->setObjectName(QStringLiteral("comboBox_2_dong"));
-        comboBox_2_dong->setGeometry(QRect(170, 390, 141, 22));
-        lineEdit_6_address = new QLineEdit(centralWidget);
-        lineEdit_6_address->setObjectName(QStringLiteral("lineEdit_6_address"));
-        lineEdit_6_address->setGeometry(QRect(170, 440, 141, 51));
+        comboBox_2_dong->setGeometry(QRect(170, 400, 141, 22));
+        lineEdit_7_address = new QLineEdit(centralWidget);
+        lineEdit_7_address->setObjectName(QStringLiteral("lineEdit_7_address"));
+        lineEdit_7_address->setGeometry(QRect(170, 450, 141, 51));
         lineEdit_6_great_person = new QLineEdit(centralWidget);
         lineEdit_6_great_person->setObjectName(QStringLiteral("lineEdit_6_great_person"));
-        lineEdit_6_great_person->setGeometry(QRect(10, 470, 81, 20));
+        lineEdit_6_great_person->setGeometry(QRect(10, 480, 81, 20));
         pushButton_8_add_great_person = new QPushButton(centralWidget);
         pushButton_8_add_great_person->setObjectName(QStringLiteral("pushButton_8_add_great_person"));
-        pushButton_8_add_great_person->setGeometry(QRect(100, 470, 31, 23));
+        pushButton_8_add_great_person->setGeometry(QRect(100, 480, 31, 23));
         pushButton_9_remove_great_person = new QPushButton(centralWidget);
         pushButton_9_remove_great_person->setObjectName(QStringLiteral("pushButton_9_remove_great_person"));
-        pushButton_9_remove_great_person->setGeometry(QRect(130, 470, 31, 23));
+        pushButton_9_remove_great_person->setGeometry(QRect(130, 480, 31, 23));
+        label_16 = new QLabel(centralWidget);
+        label_16->setObjectName(QStringLiteral("label_16"));
+        label_16->setGeometry(QRect(10, 510, 31, 16));
+        label_17 = new QLabel(centralWidget);
+        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setGeometry(QRect(80, 510, 51, 16));
+        lineEdit_8_weight = new QLineEdit(centralWidget);
+        lineEdit_8_weight->setObjectName(QStringLiteral("lineEdit_8_weight"));
+        lineEdit_8_weight->setGeometry(QRect(40, 510, 31, 20));
+        lineEdit_9_career = new QLineEdit(centralWidget);
+        lineEdit_9_career->setObjectName(QStringLiteral("lineEdit_9_career"));
+        lineEdit_9_career->setGeometry(QRect(130, 510, 31, 20));
+        label_18 = new QLabel(centralWidget);
+        label_18->setObjectName(QStringLiteral("label_18"));
+        label_18->setGeometry(QRect(170, 510, 81, 16));
+        label_19_prefer_num = new QLabel(centralWidget);
+        label_19_prefer_num->setObjectName(QStringLiteral("label_19_prefer_num"));
+        label_19_prefer_num->setGeometry(QRect(260, 510, 41, 16));
+        label_20 = new QLabel(centralWidget);
+        label_20->setObjectName(QStringLiteral("label_20"));
+        label_20->setGeometry(QRect(10, 560, 21, 16));
+        lineEdit_10_height = new QLineEdit(centralWidget);
+        lineEdit_10_height->setObjectName(QStringLiteral("lineEdit_10_height"));
+        lineEdit_10_height->setGeometry(QRect(10, 580, 31, 20));
+        label_21 = new QLabel(centralWidget);
+        label_21->setObjectName(QStringLiteral("label_21"));
+        label_21->setGeometry(QRect(80, 560, 51, 16));
+        lineEdit_11_salary = new QLineEdit(centralWidget);
+        lineEdit_11_salary->setObjectName(QStringLiteral("lineEdit_11_salary"));
+        lineEdit_11_salary->setGeometry(QRect(80, 580, 61, 20));
+        pushButton_10_esc = new QPushButton(centralWidget);
+        pushButton_10_esc->setObjectName(QStringLiteral("pushButton_10_esc"));
+        pushButton_10_esc->setGeometry(QRect(10, 630, 311, 23));
+        dial_prefer_num = new QDial(centralWidget);
+        dial_prefer_num->setObjectName(QStringLiteral("dial_prefer_num"));
+        dial_prefer_num->setGeometry(QRect(210, 530, 91, 91));
+        horizontalSlider_weight = new QSlider(centralWidget);
+        horizontalSlider_weight->setObjectName(QStringLiteral("horizontalSlider_weight"));
+        horizontalSlider_weight->setGeometry(QRect(10, 532, 51, 20));
+        horizontalSlider_weight->setMinimum(30);
+        horizontalSlider_weight->setMaximum(120);
+        horizontalSlider_weight->setOrientation(Qt::Horizontal);
+        verticalSlider_height = new QSlider(centralWidget);
+        verticalSlider_height->setObjectName(QStringLiteral("verticalSlider_height"));
+        verticalSlider_height->setGeometry(QRect(50, 560, 20, 41));
+        verticalSlider_height->setMinimum(100);
+        verticalSlider_height->setMaximum(210);
+        verticalSlider_height->setOrientation(Qt::Vertical);
+        horizontalScrollBar_career = new QScrollBar(centralWidget);
+        horizontalScrollBar_career->setObjectName(QStringLiteral("horizontalScrollBar_career"));
+        horizontalScrollBar_career->setGeometry(QRect(80, 530, 81, 21));
+        horizontalScrollBar_career->setMaximum(20);
+        horizontalScrollBar_career->setOrientation(Qt::Horizontal);
+        verticalScrollBar_salary = new QScrollBar(centralWidget);
+        verticalScrollBar_salary->setObjectName(QStringLiteral("verticalScrollBar_salary"));
+        verticalScrollBar_salary->setGeometry(QRect(146, 559, 20, 61));
+        verticalScrollBar_salary->setMinimum(2400);
+        verticalScrollBar_salary->setMaximum(10000);
+        verticalScrollBar_salary->setOrientation(Qt::Vertical);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -302,6 +380,13 @@ public:
 
         pushButton_8_add_great_person->setText(QApplication::translate("MainWindow", "+", nullptr));
         pushButton_9_remove_great_person->setText(QApplication::translate("MainWindow", "-", nullptr));
+        label_16->setText(QApplication::translate("MainWindow", "\354\262\264\354\244\221:", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "\352\262\275\353\240\245(\353\205\204):", nullptr));
+        label_18->setText(QApplication::translate("MainWindow", "\354\242\213\354\225\204\355\225\230\353\212\224 \354\210\253\354\236\220:", nullptr));
+        label_19_prefer_num->setText(QApplication::translate("MainWindow", "\354\210\253\354\236\220", nullptr));
+        label_20->setText(QApplication::translate("MainWindow", "\355\202\244:", nullptr));
+        label_21->setText(QApplication::translate("MainWindow", "\355\235\254\353\247\235\354\227\260\353\264\211:", nullptr));
+        pushButton_10_esc->setText(QApplication::translate("MainWindow", "\354\242\205\353\243\214", nullptr));
     } // retranslateUi
 
 };

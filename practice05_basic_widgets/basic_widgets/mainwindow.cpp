@@ -14,6 +14,28 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->comboBox_2_dong->addItem(dong_list[0]);                 // 초기 구에 맞춰 동 아이템추가(용봉동)
     ui->comboBox_2_dong->addItem(dong_list[1]);                 // 초기 구에 맞춰 동 아이템추가(매곡동)
 
+    ui->horizontalSlider_weight->setMinimum(30);                // 체중 최소값 최대값 설정
+    ui->horizontalSlider_weight->setMaximum(120);
+
+    ui->verticalSlider_height->setMinimum(100);                 // 신장 최소값 최대값 설정
+    ui->verticalSlider_height->setMaximum(210);
+
+    ui->horizontalScrollBar_career->setMinimum(0);              // 경력 최소값 최대값 설정
+    ui->horizontalScrollBar_career->setMaximum(20);
+
+    ui->verticalScrollBar_salary->setMinimum(2400);             // 희망연봉 최소값 최대값 설정
+    ui->verticalScrollBar_salary->setMaximum(10000);
+
+    // 최소 최대값 뒤집기
+    // ui->verticalScrollBar_salary->setInvertedAppearance(true);
+
+    ui->dial_prefer_num->setMinimum(0);                         // 좋아하는 숫자 최소값 최대값 설정
+    ui->dial_prefer_num->setMaximum(100);
+
+    ui->lineEdit_8_weight->setReadOnly(true);                   // 라인에딧 읽기전용 속성 설정
+    ui->lineEdit_10_height->setReadOnly(true);
+    ui->lineEdit_9_career->setReadOnly(true);
+    ui->lineEdit_11_salary->setReadOnly(true);
 }
 
 MainWindow::~MainWindow()
@@ -170,5 +192,36 @@ void MainWindow::on_comboBox_2_dong_currentIndexChanged(int index)  // 동 슬�
     QString gu, dong;
     gu   = ui->comboBox_1_gu->currentText();
     dong = ui->comboBox_2_dong->currentText();
-    ui->lineEdit_6_address->setText(gu + " " + dong);
+    ui->lineEdit_7_address->setText(gu + " " + dong);
 }
+
+void MainWindow::on_horizontalSlider_weight_valueChanged(int value) // 가로 체중 슬라이더 값 변경시 발생 슬롯
+{
+    ui->lineEdit_8_weight->setText(QString::number(value));
+}
+
+void MainWindow::on_verticalSlider_height_valueChanged(int value)   // 세로 신장 슬라이더 값 변경시 발생 슬롯
+{
+    ui->lineEdit_10_height->setText(QString::number(value));
+}
+
+void MainWindow::on_horizontalScrollBar_career_valueChanged(int value)  // 가로 경력 스크롤 값 변경시 발생 슬롯
+{
+    ui->lineEdit_9_career->setText(QString::number(value));
+}
+
+void MainWindow::on_verticalScrollBar_salary_valueChanged(int value)    // 세로 희망 연봉 스크롤 값 변경시 발생 슬롯
+{
+    ui->lineEdit_11_salary->setText(QString::number(value));
+}
+
+void MainWindow::on_dial_prefer_num_valueChanged(int value)             // 다이얼 선호 숫자 값 변경시 발생 슬롯
+{
+    ui->label_19_prefer_num->setText(QString::number(value));
+}
+
+void MainWindow::on_pushButton_10_esc_clicked()                         // 종료 버튼 클릭시 인스턴스 종료
+{
+    this->close();
+}
+

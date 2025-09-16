@@ -42,6 +42,18 @@ private slots:
 
     void on_comboBox_2_dong_currentIndexChanged(int index);
 
+    void on_horizontalSlider_weight_valueChanged(int value);
+
+    void on_horizontalScrollBar_career_valueChanged(int value);
+
+    void on_verticalScrollBar_salary_valueChanged(int value);
+
+    void on_dial_prefer_num_valueChanged(int value);
+
+    void on_pushButton_10_esc_clicked();
+
+    void on_verticalSlider_height_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
 

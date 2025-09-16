@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[17];
-    char stringdata0[455];
+    QByteArrayData data[24];
+    char stringdata0[684];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -47,7 +47,14 @@ QT_MOC_LITERAL(12, 288, 40), // "on_pushButton_8_add_great_per..."
 QT_MOC_LITERAL(13, 329, 43), // "on_pushButton_9_remove_great_..."
 QT_MOC_LITERAL(14, 373, 36), // "on_comboBox_1_gu_currentIndex..."
 QT_MOC_LITERAL(15, 410, 5), // "index"
-QT_MOC_LITERAL(16, 416, 38) // "on_comboBox_2_dong_currentInd..."
+QT_MOC_LITERAL(16, 416, 38), // "on_comboBox_2_dong_currentInd..."
+QT_MOC_LITERAL(17, 455, 39), // "on_horizontalSlider_weight_va..."
+QT_MOC_LITERAL(18, 495, 5), // "value"
+QT_MOC_LITERAL(19, 501, 42), // "on_horizontalScrollBar_career..."
+QT_MOC_LITERAL(20, 544, 40), // "on_verticalScrollBar_salary_v..."
+QT_MOC_LITERAL(21, 585, 31), // "on_dial_prefer_num_valueChanged"
+QT_MOC_LITERAL(22, 617, 28), // "on_pushButton_10_esc_clicked"
+QT_MOC_LITERAL(23, 646, 37) // "on_verticalSlider_height_valu..."
 
     },
     "MainWindow\0on_pushButton1_sex_male_clicked\0"
@@ -62,7 +69,13 @@ QT_MOC_LITERAL(16, 416, 38) // "on_comboBox_2_dong_currentInd..."
     "on_pushButton_8_add_great_person_clicked\0"
     "on_pushButton_9_remove_great_person_clicked\0"
     "on_comboBox_1_gu_currentIndexChanged\0"
-    "index\0on_comboBox_2_dong_currentIndexChanged"
+    "index\0on_comboBox_2_dong_currentIndexChanged\0"
+    "on_horizontalSlider_weight_valueChanged\0"
+    "value\0on_horizontalScrollBar_career_valueChanged\0"
+    "on_verticalScrollBar_salary_valueChanged\0"
+    "on_dial_prefer_num_valueChanged\0"
+    "on_pushButton_10_esc_clicked\0"
+    "on_verticalSlider_height_valueChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +85,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,18 +93,24 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   74,    2, 0x08 /* Private */,
-       3,    0,   75,    2, 0x08 /* Private */,
-       4,    0,   76,    2, 0x08 /* Private */,
-       5,    0,   77,    2, 0x08 /* Private */,
-       6,    0,   78,    2, 0x08 /* Private */,
-       7,    0,   79,    2, 0x08 /* Private */,
-       8,    0,   80,    2, 0x08 /* Private */,
-       9,    1,   81,    2, 0x08 /* Private */,
-      12,    0,   84,    2, 0x08 /* Private */,
-      13,    0,   85,    2, 0x08 /* Private */,
-      14,    1,   86,    2, 0x08 /* Private */,
-      16,    1,   89,    2, 0x08 /* Private */,
+       1,    0,  104,    2, 0x08 /* Private */,
+       3,    0,  105,    2, 0x08 /* Private */,
+       4,    0,  106,    2, 0x08 /* Private */,
+       5,    0,  107,    2, 0x08 /* Private */,
+       6,    0,  108,    2, 0x08 /* Private */,
+       7,    0,  109,    2, 0x08 /* Private */,
+       8,    0,  110,    2, 0x08 /* Private */,
+       9,    1,  111,    2, 0x08 /* Private */,
+      12,    0,  114,    2, 0x08 /* Private */,
+      13,    0,  115,    2, 0x08 /* Private */,
+      14,    1,  116,    2, 0x08 /* Private */,
+      16,    1,  119,    2, 0x08 /* Private */,
+      17,    1,  122,    2, 0x08 /* Private */,
+      19,    1,  125,    2, 0x08 /* Private */,
+      20,    1,  128,    2, 0x08 /* Private */,
+      21,    1,  131,    2, 0x08 /* Private */,
+      22,    0,  134,    2, 0x08 /* Private */,
+      23,    1,  135,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -106,6 +125,12 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   15,
     QMetaType::Void, QMetaType::Int,   15,
+    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   18,
 
        0        // eod
 };
@@ -128,6 +153,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 9: _t->on_pushButton_9_remove_great_person_clicked(); break;
         case 10: _t->on_comboBox_1_gu_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 11: _t->on_comboBox_2_dong_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 12: _t->on_horizontalSlider_weight_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 13: _t->on_horizontalScrollBar_career_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 14: _t->on_verticalScrollBar_salary_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 15: _t->on_dial_prefer_num_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->on_pushButton_10_esc_clicked(); break;
+        case 17: _t->on_verticalSlider_height_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -158,13 +189,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 18)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 12;
+        _id -= 18;
     }
     return _id;
 }
