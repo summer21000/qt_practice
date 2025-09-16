@@ -33,6 +33,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // 헤더파일에 #include <QDebug> 추가
     qDebug() << "<C++ basic grammer test>";
+    qDebug() << "=============<C++ basic grammer test: if>=============";
 
     int point1 = 20, point2 = 60, point3 = 99;
 
@@ -40,11 +41,25 @@ MainWindow::MainWindow(QWidget *parent) :
     reaction_if(point2);
     reaction_if(point3);
 
-    int today, yesterday;
-    today = sat;
-    yesterday = today - 1;
+    qDebug() << "=============<C++ basic grammer test: switch>=========";
 
-    reaction_switch(yesterday);
+    int today;
+    today = mon;
+
+    reaction_switch(today);
+
+    qDebug() << "=============<C++ basic grammer test: for>============";
+
+    int sum = 0;
+
+    for(int i = 0; i < 10; i++){
+        qDebug() << i;
+        sum += i;
+    }
+
+    qDebug() << QString("sum %1").arg(sum);
+
+    qDebug() << "======================================================";
 }
 
 MainWindow::~MainWindow()
