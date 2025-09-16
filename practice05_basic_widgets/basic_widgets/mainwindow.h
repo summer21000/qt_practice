@@ -23,6 +23,14 @@ private slots:
 
     void on_pushButton3_sex_etc_clicked();
 
+    void on_pushButton_4_cal_clicked();
+
+    void on_pushButton_5_reset_clicked();
+
+    void on_pushButton_6_set_clicked();
+
+    void on_pushButton_7_reset_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
