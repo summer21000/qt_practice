@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 
 enum weekday {
-    mon, tue, wed, thu, fri, sat,sun
+    mon, tue, wed, thu, fri, sat,sun //switch 문은 일반적으로 enum과 함께 쓰임
 };
 
 void reaction_if(int x){
@@ -58,6 +58,23 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     qDebug() << QString("sum %1").arg(sum);
+
+    qDebug() << "=============<C++ basic grammer test: array>==========";
+
+    qDebug() << "static array";
+    int number[10]; // 정적배열
+    for(int i = 0; i < 10; i++){
+        number[i] = i;
+        qDebug() << QString("number[%1] = %2").arg(i).arg(number[i]);
+    }
+
+    qDebug() << "dynamic array";
+    int* num = new int[10]; // 동적 배열
+    for(int i = 0; i < 10; i++){
+        num[i] = i;
+        qDebug() << QString("num[%1] = %2").arg(i).arg(num[i]);
+    }
+    delete[] num; // 동적배열 메모리 해제
 
     qDebug() << "======================================================";
 }
