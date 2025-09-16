@@ -38,8 +38,15 @@ private slots:
 
     void on_pushButton_9_remove_great_person_clicked();
 
+    void on_comboBox_1_gu_currentIndexChanged(int index);
+
+    void on_comboBox_2_dong_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
+
+
+    QString dong_list[5];        // 동 초기값들을 저장해서 사용, 본문 소스 상단에서 텍스트 값을 가져옴
 };
 
 #endif // MAINWINDOW_H

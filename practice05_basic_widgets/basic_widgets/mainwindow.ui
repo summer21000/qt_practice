@@ -495,7 +495,7 @@
      <string>선택한 주소지</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBox_1_gu">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -504,8 +504,23 @@
       <height>22</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string>북구</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>서구</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>광산구</string>
+     </property>
+    </item>
    </widget>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="comboBox_2_dong">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -514,8 +529,33 @@
       <height>22</height>
      </rect>
     </property>
+    <item>
+     <property name="text">
+      <string>용봉동</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>매곡동</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>치평동</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>신가동</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>신창동</string>
+     </property>
+    </item>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_6_address">
     <property name="geometry">
      <rect>
       <x>170</x>

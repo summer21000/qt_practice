@@ -70,9 +70,9 @@ public:
     QLabel *label_13;
     QLabel *label_14;
     QLabel *label_15;
-    QComboBox *comboBox;
-    QComboBox *comboBox_2;
-    QLineEdit *lineEdit;
+    QComboBox *comboBox_1_gu;
+    QComboBox *comboBox_2_dong;
+    QLineEdit *lineEdit_6_address;
     QLineEdit *lineEdit_6_great_person;
     QPushButton *pushButton_8_add_great_person;
     QPushButton *pushButton_9_remove_great_person;
@@ -202,15 +202,23 @@ public:
         label_15 = new QLabel(centralWidget);
         label_15->setObjectName(QStringLiteral("label_15"));
         label_15->setGeometry(QRect(170, 420, 91, 16));
-        comboBox = new QComboBox(centralWidget);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(170, 340, 141, 22));
-        comboBox_2 = new QComboBox(centralWidget);
-        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
-        comboBox_2->setGeometry(QRect(170, 390, 141, 22));
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(170, 440, 141, 51));
+        comboBox_1_gu = new QComboBox(centralWidget);
+        comboBox_1_gu->addItem(QString());
+        comboBox_1_gu->addItem(QString());
+        comboBox_1_gu->addItem(QString());
+        comboBox_1_gu->setObjectName(QStringLiteral("comboBox_1_gu"));
+        comboBox_1_gu->setGeometry(QRect(170, 340, 141, 22));
+        comboBox_2_dong = new QComboBox(centralWidget);
+        comboBox_2_dong->addItem(QString());
+        comboBox_2_dong->addItem(QString());
+        comboBox_2_dong->addItem(QString());
+        comboBox_2_dong->addItem(QString());
+        comboBox_2_dong->addItem(QString());
+        comboBox_2_dong->setObjectName(QStringLiteral("comboBox_2_dong"));
+        comboBox_2_dong->setGeometry(QRect(170, 390, 141, 22));
+        lineEdit_6_address = new QLineEdit(centralWidget);
+        lineEdit_6_address->setObjectName(QStringLiteral("lineEdit_6_address"));
+        lineEdit_6_address->setGeometry(QRect(170, 440, 141, 51));
         lineEdit_6_great_person = new QLineEdit(centralWidget);
         lineEdit_6_great_person->setObjectName(QStringLiteral("lineEdit_6_great_person"));
         lineEdit_6_great_person->setGeometry(QRect(10, 470, 81, 20));
@@ -282,6 +290,16 @@ public:
         label_13->setText(QApplication::translate("MainWindow", "\352\265\254 \354\204\240\355\203\235:", nullptr));
         label_14->setText(QApplication::translate("MainWindow", "\353\217\231 \354\204\240\355\203\235 :", nullptr));
         label_15->setText(QApplication::translate("MainWindow", "\354\204\240\355\203\235\355\225\234 \354\243\274\354\206\214\354\247\200", nullptr));
+        comboBox_1_gu->setItemText(0, QApplication::translate("MainWindow", "\353\266\201\352\265\254", nullptr));
+        comboBox_1_gu->setItemText(1, QApplication::translate("MainWindow", "\354\204\234\352\265\254", nullptr));
+        comboBox_1_gu->setItemText(2, QApplication::translate("MainWindow", "\352\264\221\354\202\260\352\265\254", nullptr));
+
+        comboBox_2_dong->setItemText(0, QApplication::translate("MainWindow", "\354\232\251\353\264\211\353\217\231", nullptr));
+        comboBox_2_dong->setItemText(1, QApplication::translate("MainWindow", "\353\247\244\352\263\241\353\217\231", nullptr));
+        comboBox_2_dong->setItemText(2, QApplication::translate("MainWindow", "\354\271\230\355\217\211\353\217\231", nullptr));
+        comboBox_2_dong->setItemText(3, QApplication::translate("MainWindow", "\354\213\240\352\260\200\353\217\231", nullptr));
+        comboBox_2_dong->setItemText(4, QApplication::translate("MainWindow", "\354\213\240\354\260\275\353\217\231", nullptr));
+
         pushButton_8_add_great_person->setText(QApplication::translate("MainWindow", "+", nullptr));
         pushButton_9_remove_great_person->setText(QApplication::translate("MainWindow", "-", nullptr));
     } // retranslateUi

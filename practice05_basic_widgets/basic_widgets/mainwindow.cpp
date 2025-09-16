@@ -6,6 +6,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    for(int i=0; i<5; i++){
+       dong_list[i] = ui->comboBox_2_dong->itemText(i);         // 동 콤보박스에 저장된 초기값 아이템의 텍스트를 가져와 배열 초기화
+    }
+    ui->comboBox_2_dong->clear();                               // 구 콤보박스 아이템 초기화
+    ui->comboBox_2_dong->addItem(dong_list[0]);                 // 초기 구에 맞춰 동 아이템추가(용봉동)
+    ui->comboBox_2_dong->addItem(dong_list[1]);                 // 초기 구에 맞춰 동 아이템추가(매곡동)
+
 }
 
 MainWindow::~MainWindow()
@@ -136,3 +144,31 @@ void MainWindow::on_listWidget_1_great_person_itemClicked(QListWidgetItem *item)
 }
 
 
+void MainWindow::on_comboBox_1_gu_currentIndexChanged(int index)    // 구 슬롯 박스가 변경되었을 때 발생 슬롯
+{
+    ui->comboBox_2_dong->clear();
+
+    switch(index){
+    case 0:                                                         // 구 콤보박스가 북구일때
+        ui->comboBox_2_dong->addItem(dong_list[0]);                 // 용봉동 추가
+        ui->comboBox_2_dong->addItem(dong_list[1]);                 // 매곡동 추가
+        break;
+
+    case 1:                                                         // 구 콤보박스가 서구일때
+        ui->comboBox_2_dong->addItem(dong_list[2]);                 // 치평동 추가
+        break;
+
+    case 2:                                                         // 구 콤보박스가 광산구일때
+        ui->comboBox_2_dong->addItem(dong_list[3]);                 // 신가동 추가
+        ui->comboBox_2_dong->addItem(dong_list[4]);                 // 신창동 추가
+        break;
+    }
+}
+
+void MainWindow::on_comboBox_2_dong_currentIndexChanged(int index)  // 동 슬롯 박스가 변경되었을 때 발생 슬롯
+{
+    QString gu, dong;
+    gu   = ui->comboBox_1_gu->currentText();
+    dong = ui->comboBox_2_dong->currentText();
+    ui->lineEdit_6_address->setText(gu + " " + dong);
+}
