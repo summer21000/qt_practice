@@ -14,9 +14,11 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -62,6 +64,18 @@ public:
     QRadioButton *radioButton_1_20;
     QRadioButton *radioButton_2_30;
     QRadioButton *radioButton_3_40;
+    QLabel *label_11;
+    QListWidget *listWidget_1_great_person;
+    QLabel *label_12;
+    QLabel *label_13;
+    QLabel *label_14;
+    QLabel *label_15;
+    QComboBox *comboBox;
+    QComboBox *comboBox_2;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_6_great_person;
+    QPushButton *pushButton_8_add_great_person;
+    QPushButton *pushButton_9_remove_great_person;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -70,7 +84,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(328, 512);
+        MainWindow->resize(328, 628);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -167,6 +181,45 @@ public:
         radioButton_3_40 = new QRadioButton(centralWidget);
         radioButton_3_40->setObjectName(QStringLiteral("radioButton_3_40"));
         radioButton_3_40->setGeometry(QRect(10, 270, 41, 16));
+        label_11 = new QLabel(centralWidget);
+        label_11->setObjectName(QStringLiteral("label_11"));
+        label_11->setGeometry(QRect(10, 290, 121, 16));
+        listWidget_1_great_person = new QListWidget(centralWidget);
+        new QListWidgetItem(listWidget_1_great_person);
+        new QListWidgetItem(listWidget_1_great_person);
+        new QListWidgetItem(listWidget_1_great_person);
+        listWidget_1_great_person->setObjectName(QStringLiteral("listWidget_1_great_person"));
+        listWidget_1_great_person->setGeometry(QRect(10, 310, 151, 151));
+        label_12 = new QLabel(centralWidget);
+        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setGeometry(QRect(170, 290, 61, 16));
+        label_13 = new QLabel(centralWidget);
+        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(170, 320, 56, 12));
+        label_14 = new QLabel(centralWidget);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(170, 370, 56, 12));
+        label_15 = new QLabel(centralWidget);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setGeometry(QRect(170, 420, 91, 16));
+        comboBox = new QComboBox(centralWidget);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboBox->setGeometry(QRect(170, 340, 141, 22));
+        comboBox_2 = new QComboBox(centralWidget);
+        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
+        comboBox_2->setGeometry(QRect(170, 390, 141, 22));
+        lineEdit = new QLineEdit(centralWidget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(170, 440, 141, 51));
+        lineEdit_6_great_person = new QLineEdit(centralWidget);
+        lineEdit_6_great_person->setObjectName(QStringLiteral("lineEdit_6_great_person"));
+        lineEdit_6_great_person->setGeometry(QRect(10, 470, 81, 20));
+        pushButton_8_add_great_person = new QPushButton(centralWidget);
+        pushButton_8_add_great_person->setObjectName(QStringLiteral("pushButton_8_add_great_person"));
+        pushButton_8_add_great_person->setGeometry(QRect(100, 470, 31, 23));
+        pushButton_9_remove_great_person = new QPushButton(centralWidget);
+        pushButton_9_remove_great_person->setObjectName(QStringLiteral("pushButton_9_remove_great_person"));
+        pushButton_9_remove_great_person->setGeometry(QRect(130, 470, 31, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -213,6 +266,24 @@ public:
         radioButton_1_20->setText(QApplication::translate("MainWindow", "20\353\214\200", nullptr));
         radioButton_2_30->setText(QApplication::translate("MainWindow", "30\353\214\200", nullptr));
         radioButton_3_40->setText(QApplication::translate("MainWindow", "40\353\214\200", nullptr));
+        label_11->setText(QApplication::translate("MainWindow", "\354\241\264\352\262\275\355\225\230\353\212\224 \354\234\204\354\235\270\353\246\254\354\212\244\355\212\270", nullptr));
+
+        const bool __sortingEnabled = listWidget_1_great_person->isSortingEnabled();
+        listWidget_1_great_person->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = listWidget_1_great_person->item(0);
+        ___qlistwidgetitem->setText(QApplication::translate("MainWindow", "\354\235\264\354\210\234\354\213\240", nullptr));
+        QListWidgetItem *___qlistwidgetitem1 = listWidget_1_great_person->item(1);
+        ___qlistwidgetitem1->setText(QApplication::translate("MainWindow", "\354\204\270\354\242\205\353\214\200\354\231\225", nullptr));
+        QListWidgetItem *___qlistwidgetitem2 = listWidget_1_great_person->item(2);
+        ___qlistwidgetitem2->setText(QApplication::translate("MainWindow", "\354\225\210\354\244\221\352\267\274", nullptr));
+        listWidget_1_great_person->setSortingEnabled(__sortingEnabled);
+
+        label_12->setText(QApplication::translate("MainWindow", "\354\243\274\354\206\214\354\247\200", nullptr));
+        label_13->setText(QApplication::translate("MainWindow", "\352\265\254 \354\204\240\355\203\235:", nullptr));
+        label_14->setText(QApplication::translate("MainWindow", "\353\217\231 \354\204\240\355\203\235 :", nullptr));
+        label_15->setText(QApplication::translate("MainWindow", "\354\204\240\355\203\235\355\225\234 \354\243\274\354\206\214\354\247\200", nullptr));
+        pushButton_8_add_great_person->setText(QApplication::translate("MainWindow", "+", nullptr));
+        pushButton_9_remove_great_person->setText(QApplication::translate("MainWindow", "-", nullptr));
     } // retranslateUi
 
 };

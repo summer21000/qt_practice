@@ -114,3 +114,25 @@ void MainWindow::on_pushButton_7_reset_clicked()                    // 리셋 �
 
     ui->lineEdit_5_display->setText("");                            // 나이대, 취미 표시창 초기화
 }
+
+void MainWindow::on_pushButton_8_add_great_person_clicked()         // 리스트 아이템 추가 버튼
+{
+    if(ui->lineEdit_6_great_person->text() != "")
+        ui->listWidget_1_great_person->addItem(ui->lineEdit_6_great_person->text());
+    ui->lineEdit_6_great_person->setText("");                       // 입력란 초기화
+}
+
+void MainWindow::on_pushButton_9_remove_great_person_clicked()      // 리스트 아이템 제거 버튼
+{
+    QListWidgetItem*item = ui->listWidget_1_great_person->currentItem(); // 리스트에서 선택된 아이템 가져오기
+
+    delete item;
+}
+
+
+void MainWindow::on_listWidget_1_great_person_itemClicked(QListWidgetItem *item)
+{
+    ui->lineEdit_6_great_person->setText(item->text());
+}
+
+
