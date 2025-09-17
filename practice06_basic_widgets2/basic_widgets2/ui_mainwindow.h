@@ -35,10 +35,10 @@ public:
     QLabel *label_2;
     QLabel *label_3_Time;
     QLabel *label_4;
-    QLineEdit *lineEdit_fileAdress;
+    QLineEdit *lineEdit_fileName;
     QPushButton *pushButton_1_select_image;
     QPushButton *pushButton_2_apply;
-    QLabel *label_5;
+    QLabel *label_5_progressbar;
     QProgressBar *progressBar;
     QGraphicsView *graphicsView;
     QPushButton *pushButton_3_esc;
@@ -65,22 +65,22 @@ public:
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(10, 60, 181, 16));
-        lineEdit_fileAdress = new QLineEdit(centralWidget);
-        lineEdit_fileAdress->setObjectName(QStringLiteral("lineEdit_fileAdress"));
-        lineEdit_fileAdress->setGeometry(QRect(20, 80, 221, 20));
+        lineEdit_fileName = new QLineEdit(centralWidget);
+        lineEdit_fileName->setObjectName(QStringLiteral("lineEdit_fileName"));
+        lineEdit_fileName->setGeometry(QRect(20, 80, 221, 20));
         pushButton_1_select_image = new QPushButton(centralWidget);
         pushButton_1_select_image->setObjectName(QStringLiteral("pushButton_1_select_image"));
         pushButton_1_select_image->setGeometry(QRect(250, 80, 75, 23));
         pushButton_2_apply = new QPushButton(centralWidget);
         pushButton_2_apply->setObjectName(QStringLiteral("pushButton_2_apply"));
         pushButton_2_apply->setGeometry(QRect(330, 80, 51, 23));
-        label_5 = new QLabel(centralWidget);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(20, 110, 91, 16));
+        label_5_progressbar = new QLabel(centralWidget);
+        label_5_progressbar->setObjectName(QStringLiteral("label_5_progressbar"));
+        label_5_progressbar->setGeometry(QRect(20, 110, 91, 16));
         progressBar = new QProgressBar(centralWidget);
         progressBar->setObjectName(QStringLiteral("progressBar"));
         progressBar->setGeometry(QRect(20, 130, 361, 23));
-        progressBar->setValue(24);
+        progressBar->setValue(0);
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
         graphicsView->setGeometry(QRect(20, 170, 361, 311));
@@ -113,7 +113,7 @@ public:
         label_4->setText(QApplication::translate("MainWindow", "QFileDialog and QGraphicsview", nullptr));
         pushButton_1_select_image->setText(QApplication::translate("MainWindow", "\354\235\264\353\257\270\354\247\200\354\204\240\355\203\235", nullptr));
         pushButton_2_apply->setText(QApplication::translate("MainWindow", "\354\240\201\354\232\251", nullptr));
-        label_5->setText(QApplication::translate("MainWindow", "QProgressBar", nullptr));
+        label_5_progressbar->setText(QApplication::translate("MainWindow", "QProgressBar", nullptr));
         pushButton_3_esc->setText(QApplication::translate("MainWindow", "\354\242\205\353\243\214", nullptr));
     } // retranslateUi
 
