@@ -19,12 +19,26 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_1_pointAddress_clicked()
 {
     // 파일 탐색기창 제목
+    QString str_caption = "Save_File";
+    // 처음탐색할 경로 설정
+    QString str_dir = "";
 
+    QString file = QFileDialog::getExistingDirectory(this,str_caption, str_dir);
+
+    ui->lineEdit_1_address->setText(file);
 }
 
 void MainWindow::on_pushButton_2_openAddress_clicked()
 {
+    QDir path(ui->lineEdit_1_address->text());
 
+    if(path.exists() == 1){
+        QDesktopServices::openUrl(QUrl::fromLocalFile(ui->lineEdit_1_address->text()));
+    }
+    else{
+        QMessageBox::warning(this,
+                             tr)
+    }
 }
 
 void MainWindow::on_pushButton_3saveSetting_clicked()
